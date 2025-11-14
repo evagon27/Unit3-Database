@@ -4,18 +4,18 @@
  */
 
 // Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     console.log('🎬 CineMatch loaded successfully!');
-    
+
     // Auto-dismiss flash messages after 5 seconds
     const alerts = document.querySelectorAll('.alert');
-    alerts.forEach(function(alert) {
-        setTimeout(function() {
+    alerts.forEach(function (alert) {
+        setTimeout(function () {
             const bsAlert = new bootstrap.Alert(alert);
             bsAlert.close();
         }, 5000);
     });
-    
+
     // Add smooth scrolling to anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     // Log to console (helps students debug)
     console.log('✅ Flash message auto-dismiss enabled');
     console.log('✅ Smooth scrolling enabled');
